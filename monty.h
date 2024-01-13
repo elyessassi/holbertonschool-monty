@@ -50,6 +50,7 @@ int specif(char *line, stack_t *stack);
 void _pall(stack_t **stack, unsigned int line_number);
 void _push(stack_t **stack, unsigned int line_number);
 void freestack(stack_t *stack);
+void _pint(stack_t **stack, unsigned int line_number);
 
 extern stack_t *head;
 
