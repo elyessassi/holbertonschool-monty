@@ -1,9 +1,10 @@
 #include "monty.h"
 
 /**
- * main _ main function
+ * main - main function
  * @argc: number of arguments
  * @argv: array of arguments + program name
+ * Return: always 0
  */
 
 int main(int argc, char *argv[])
