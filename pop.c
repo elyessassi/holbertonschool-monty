@@ -10,7 +10,7 @@ void _pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = NULL;
 
-	if (stack == NULL)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
