@@ -23,7 +23,7 @@ void split(stack_t **stack, unsigned int line_number, char *opcode)
         }
         i++;
     }
-    if (ops[i].opcode == NULL)
+    if (strlen(opcode) != 0)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s", line_number, opcode);
 		exit(EXIT_FAILURE);
