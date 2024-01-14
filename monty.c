@@ -11,8 +11,8 @@ int main(int argc, char *argv[])
     stack_t *stack = NULL;
     int ln = 0;
     FILE *fd;
-    char *buffer;
-    size_t len;
+    char *buffer = NULL;
+    size_t len = 0;
 
     if (argc != 2)
     {
