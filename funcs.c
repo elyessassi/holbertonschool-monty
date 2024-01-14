@@ -9,6 +9,8 @@ void _push(stack_t **stack, unsigned int line_number)
     (void)line_number;
     char *d = "$ \n\t",*op;
     int data;
+    int flag = 1;
+    int i;
 
     if (newnode == NULL)
     {
@@ -17,14 +19,24 @@ void _push(stack_t **stack, unsigned int line_number)
     }
 
     op = strtok(NULL, d);
-    if ((op == NULL))
+    if ((op == NULL) || (stack == NULL))
     {
         fprintf(stderr, "L%d: usage: push integer\n", line_number);
         exit(EXIT_FAILURE);
     }
-    data = atoi(op);
-
-
+    if (op[0] == '-')
+    {
+        flag = -1;
+    }
+    for (i = 0 ; op[i] != '\0' ; i++)
+    {
+        if (isdigit(op[i]) == 0)
+        {
+            fprintf(stderr, "L%d: usage: push integer\n", line_number);
+            exit(EXIT_FAILURE);
+        }
+    }
+    data = (atoi(op)*flag);
     newnode->n = data;
     newnode->next = (*stack);
     newnode->prev = NULL;
