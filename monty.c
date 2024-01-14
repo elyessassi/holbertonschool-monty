@@ -29,7 +29,10 @@ int main(int argc, char *argv[])
     {
         ln++;
         opcode = strtok(buffer, d);
-        split(&stack, ln, opcode);
+        if (opcode != NULL)
+        {
+            split(&stack, ln, opcode);
+        }
     }
     free(buffer);
     freestack(stack);
