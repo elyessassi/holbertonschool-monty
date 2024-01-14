@@ -17,6 +17,7 @@ void split(stack_t **stack, unsigned int line_number, char *opcode)
 		{"nop", _nop},
 		{"pop", _pop},
 		{"swap", _swap},
+		{"add", _add},
 		{NULL, NULL}};
 	while (ops[i].opcode != NULL)
 	{
